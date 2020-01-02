@@ -21,6 +21,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # Node Version Manager configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

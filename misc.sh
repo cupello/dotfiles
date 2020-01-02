@@ -7,6 +7,17 @@ if [ -d "$ZSH/custom/themes/spaceship-prompt" ]
 then
     echo "spaceship-prompt is already installed, skipping..."
 else
+    echo "installing spaceship-prompt..."
     git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/custom/themes/spaceship-prompt"
     ln -s "$ZSH/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
+fi
+
+
+if [ -d "~/.local/share/nvim/site/autoload/plug.vim" ]
+then
+    echo "vim-lug is already installed, skipping..."
+else
+    echo "installing vim-lug..."
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
