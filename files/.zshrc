@@ -21,6 +21,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Load aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+# Homebrew setup
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Node Version Manager configuration
@@ -51,16 +57,11 @@ export PATH=$PATH:/opt/flutter/bin
 export GOROOT_BOOTSTRAP=$GOROOT
 [[ -s "/Users/caioferreira/.gvm/scripts/gvm" ]] && source "/Users/caioferreira/.gvm/scripts/gvm"
 
-# Setup key bindings
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
-
-alias k=kubectl
-
 # Python Path
 export PATH="/Users/caioferreira/Library/Python/3.7/bin:$PATH"
+
+# Set neovim as editor
+export EDITOR=nvim
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/caioferreira/.sdkman"

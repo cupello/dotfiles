@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Setup key bindings
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
+
+alias k=kubectl
+
+alias vim="nvim"
+alias vimdiff="nvim -d"
