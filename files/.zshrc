@@ -8,11 +8,9 @@ export ZSH="/Users/${USER}/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 plugins=(
+  z
   git
   brew
-  node
-  npm
-  vscode
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
