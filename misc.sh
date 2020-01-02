@@ -15,9 +15,17 @@ fi
 
 if [ -d "~/.local/share/nvim/site/autoload/plug.vim" ]
 then
-    echo "vim-lug is already installed, skipping..."
+    echo "vim-plug is already installed, skipping..."
 else
     echo "installing vim-lug..."
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+if [ -d "~/.tmux/plugins/tpm" ]
+then
+    echo "tmux tpm is already installed, skipping..."
+else
+    echo "installing tmux tpm..."
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi

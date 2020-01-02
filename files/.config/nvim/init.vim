@@ -159,7 +159,7 @@ let g:user_emmet_settings = {
 set t_Co=256
 
 " set colorscheme
-colorscheme nord
+" colorscheme nord
 
 " long lines as just one line (have to scroll horizontally)
 set nowrap

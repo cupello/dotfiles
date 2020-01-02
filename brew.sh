@@ -43,6 +43,7 @@ brew install grep
 
 # Install other useful binaries.
 brew install git
+brew install reattach-to-user-namespace
 brew install tmux
 brew install curl
 
