@@ -28,6 +28,8 @@
     a = add --all
     ap = add . -p
     #############
+    s = status
+    #############
     b = branch
     bd = branch -d
     bdd = branch -D

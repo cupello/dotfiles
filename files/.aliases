@@ -10,3 +10,6 @@ alias k=kubectl
 
 alias vim="nvim"
 alias vimdiff="nvim -d"
+
+alias c="clear"
+
