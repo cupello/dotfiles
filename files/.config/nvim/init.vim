@@ -222,7 +222,15 @@ nnoremap ,dl    :YcmCompleter GoToDeclaration<CR>
 nnoremap ,df    :YcmCompleter GoToDefinition<CR>
 nnoremap ,#     :YcmCompleter GoToReferences<CR>
 
-
+" Navigation in insert and visual mode with home row
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " => Indentation
