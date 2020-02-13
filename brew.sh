@@ -31,30 +31,13 @@ brew install gnu-sed
 # It is also a good CLI tool
 brew install ag
 
-# This is needed for python support on Neovim for YouCompleteMe
-# Please see https://github.com/neovim/neovim/issues/1315
-brew install python@3
-pip3 install --user --upgrade neovim
-pip3 install --user --upgrade pynvim
-
 # Install more recent versions of some macOS tools.
-brew install neovim
 brew install grep
-
-# Install other useful binaries.
-brew install git
 brew install reattach-to-user-namespace
 brew install tmux
 brew install curl
 
 # Install cmake
-
-# Vim ecosystem
-brew install vim
-brew install neovim
-nvim +PlugClean! +qall
-nvim +silent +PlugInstall +qall
-python3 ~/.config/nvim/plugged/YouCompleteMe/install.py
 
 # Dev utilities
 brew install git
