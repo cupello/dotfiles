@@ -19,11 +19,19 @@ BREW_PREFIX=$(brew --prefix)
 brew install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+# Install general tools
+brew install coreutils 
+brew install automake 
+brew install autoconf 
+brew install openssl
+brew install libyaml
+brew install readline 
+brew install libxslt 
+brew install libtool 
+brew install unixodbc
+brew install unzip 
 brew install findutils
 brew install cmake
-# Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
 
 # This is needed for fzf to know how to ignore files listed in .gitignore

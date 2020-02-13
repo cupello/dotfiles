@@ -42,6 +42,9 @@ export GH_TOKEN=503393c1fbd05af873c7c6d0a18e86c4d5e1a42e
 # Python Path
 export PATH="/Users/caioferreira/Library/Python/3.7/bin:$PATH"
 
+# Add asdf binaries to PATH
+export PATH="$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH"
+
 # Set JAVA_HOME from asdf plugin
 if [ -d "$HOME/.asdf/plugins/java" ]
 then
