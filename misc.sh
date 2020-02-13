@@ -10,6 +10,17 @@ else
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# Install Powerline Fonts
+if [ -d "$ZSH/fonts" ]
+then
+    echo "Powerline fonts already installed"
+else
+    mkdir -p "$ZSH/fonts"
+    git clone https://github.com/powerline/fonts.git --depth=1 "$ZSH/fonts"
+    chmod +x $(echo "$ZSH/fonts/install.sh")
+    sh -c "$(cat $ZSH/fonts/install.sh)"
+fi
+
 # This installs the spaceship theme for zsh
 # https://github.com/denysdovhan/spaceship-prompt
 if [ -d "$ZSH/custom/themes/spaceship-prompt" ]
@@ -17,7 +28,7 @@ then
     echo "spaceship-prompt is already installed, skipping..."
 else
     echo "installing spaceship-prompt..."
-    sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/custom/themes/spaceship-prompt"
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/custom/themes/spaceship-prompt"
     ln -s "$ZSH/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
 fi
 
@@ -26,5 +37,5 @@ then
     echo "tmux tpm is already installed, skipping..."
 else
     echo "installing tmux tpm..."
-    sudo git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
