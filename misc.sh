@@ -10,6 +10,23 @@ else
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# This install Oh My ZSH plugins
+if [ -d "$ZSH_CUSTOM/plugins" ]
+then
+    echo "Oh my ZSH plugin autosuggestion is already installed, skipping..."
+else
+    echo "installing Oh my ZSH plugin autosuggestion"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+if [ -d "$ZSH_CUSTOM/plugins" ]
+then
+    echo "Oh my ZSH plugin syntax highlight is already installed, skipping..."
+else
+    echo "installing Oh my ZSH plugin syntax highlight"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
 # Install Powerline Fonts
 if [ -d "$ZSH/fonts" ]
 then
@@ -32,7 +49,7 @@ else
     ln -s "$ZSH/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
 fi
 
-if [ -d "~/.tmux/plugins/tpm" ]
+if [ -d "$HOME/.tmux/plugins/tpm" ]
 then
     echo "tmux tpm is already installed, skipping..."
 else
