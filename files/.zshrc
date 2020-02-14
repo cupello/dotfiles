@@ -48,9 +48,15 @@ export PATH="$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH"
 # Set JAVA_HOME from asdf plugin
 if [ -d "$HOME/.asdf/plugins/java" ]
 then
-    echo "No asdf java plugin detected"
-else
     . ~/.asdf/plugins/java/set-java-home.sh
+else
+    echo "No asdf java plugin detected"
 fi
  
-
+# Set GOROOT from asdf plugin
+if [ -d "$HOME/.asdf/plugins/golang" ]
+then
+    export GOROOT=$(asdf where golang)/go
+else
+    echo "No asdf golang plugin detected"
+fi
