@@ -53,6 +53,8 @@ brew install git
 brew install docker
 brew install docker-compose
 brew install docker-machine
+brew install kubectl
+brew install helm
 brew install asdf
 
 # Setup Cask
